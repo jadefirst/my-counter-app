@@ -1,6 +1,7 @@
 {
   "name": "my-counter",
   "version": "0.1.0",
+  "homepage": "https://jadefirst.github.io/my-counter-app",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
