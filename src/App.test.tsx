@@ -2,8 +2,8 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('카운터 앱이 렌더링되는지 확인', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const counterElement = screen.getByText(/카운터:/i);
+  expect(counterElement).toBeInTheDocument();
 });
