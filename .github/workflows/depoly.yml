@@ -3,16 +3,16 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [ main ]        //main브랜치에 push가 되면 실행 트리거
-//우분투 가상머신을 생성해서 배포하는 것
-jobs:                         
+
+jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest                  //우분투 최신버전으로 가상머신 만들어줘
+    runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3             //내 깃 코드를 가상머신에 다운로드 해줘
-    - name: Setup Node.jobs                 
+    - uses: actions/checkout@v3
+    - name: Setup Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '18'                  //노드 버전18을 가상머신에 설치해줘
+        node-version: '18'
     - name: Install dependencies
       run: npm install
     - name: Run tests
